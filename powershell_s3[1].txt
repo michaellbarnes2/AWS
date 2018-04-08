@@ -1,0 +1,21 @@
+foreach ($i in Get-ChildItem C:\Logs\Archive\*.7z)
+
+{
+
+#    if ($i -eq "*.7z")
+
+#    {
+
+ #       if ($i.Length -gt 0)
+
+  #      {
+
+            Write-S3Object -BucketName mbarnestestings3infostc8172017 -File $i.FullName
+
+  #      }
+
+        #Remove-Item $i.FullName
+
+   # }
+
+}

@@ -1,0 +1,14 @@
+AwsTemplateFormatVersion: '2010-09-09'
+Description: 'new test template'
+Resources:
+  myec2:
+    Type: 'AWS::EC2::Instance'
+    Properties: 
+      InstanceType: t2.micro
+      AmiId: ami-1853ac65
+      KeyName: testkey
+      BlockDeviceMappings:
+          - DeviceName: '/dev/sdm'
+            Ebs:
+              VolumeType: 'gp2'
+              VolumeSize: 10

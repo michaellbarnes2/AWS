@@ -1,0 +1,46 @@
+
+1. Open powershell ise on the local computer
+
+2.At the Powershell prompt set execuction
+Set-ExecutionPolicy RemoteSigned
+
+
+3. download the pwershell tool from aws
+https://aws.amazon.com/powershell/
+
+3a verify install aws install sucessful ( you may need to reopen posershell ise if module is not listed)
+Get-Module -ListAvailable
+
+PS C:\programming\powershell\powreshell_s3_logs> Get-Module -ListAvailable
+
+ModuleType Name                      ExportedCommands                                                           
+---------- ----                      ----------------                                                           
+Manifest   AppLocker                 {}                                                                         
+Manifest   BitsTransfer              {}                                                                         
+Manifest   PSDiagnostics             {}                                                                         
+Manifest   TroubleshootingPack       {}                                                                         
+Manifest   WebAdministration         {}                                                                         
+Manifest   AWSPowerShell             {}                                                                         
+
+
+
+4. set credentials (Use credentials for an account with only s3 access)
+
+Set-AWSCredential -AccessKey AKI45d5TH6OKEXAMPLE -SecretKey G6o9whjfgh655lfvss5VKQPSIdg/YmXfpomEXAMPLE -StoreAs default
+
+
+
+
+* Note this will need to be included in powershell program
+
+Import-Module "C:\Program Files (x86)\AWS Tools\PowerShell\AWSPowerShell\AWSPowerShell.psd1"
+
+
+
+
+
+
+
+Refer to link below for additional information:
+
+http://docs.aws.amazon.com/powershell/latest/userguide/pstools-welcome.html
