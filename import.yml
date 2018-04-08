@@ -1,0 +1,7 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  VirtualMachine:
+    Type: 'AWS::EC2::Instance'
+    Properties:
+      SubnetId: !ImportValue 'vpc-subnet'
+      ImageId: "ami-1853ac65"
